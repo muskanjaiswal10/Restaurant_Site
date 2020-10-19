@@ -19,7 +19,7 @@ class Header extends Component{
     render(){
         return(
             
-            <React.Fragment>
+            <div>
             <Navbar dark expand="md">
               <div className="container">
                   <NavbarToggler onClick={this.toggleNav}/>
@@ -28,7 +28,7 @@ class Header extends Component{
                       alt="Ristorante Con Fusion"/>
                       </NavbarBrand>
                   
-                  <Collapse isNavOpen={this.state.isOpen} navbar>
+                  <Collapse isOpen={this.state.isNavOpen} navbar>
                   <Nav navbar>
                       <NavItem>
                           <NavLink className="nav-link" to ="/home">
@@ -47,7 +47,7 @@ class Header extends Component{
                          </NavItem>
                          <NavItem> 
                           <NavLink className="nav-link" to ="/contactus">
-                              <span className="fa fa-address-card fa-lg"></span>Home
+                              <span className="fa fa-address-card fa-lg"></span>Contact Us
                           </NavLink>
                       </NavItem>
                   </Nav>
@@ -66,7 +66,7 @@ class Header extends Component{
                      </div>
                  </div>
              </Jumbotron>
-          </React.Fragment>
+          </div>
         );
     }
 }
